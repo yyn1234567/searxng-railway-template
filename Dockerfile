@@ -1,8 +1,6 @@
 FROM docker.io/searxng/searxng:latest
 
+# Pre-seed settings before the image's own entrypoint runs
 COPY settings.yml /etc/searxng/settings.yml
-COPY entrypoint.sh /entrypoint.sh
-RUN chmod +x /entrypoint.sh
 
 EXPOSE 8080
-ENTRYPOINT ["/entrypoint.sh"]

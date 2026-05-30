@@ -12,7 +12,6 @@ server:
 search:
   formats:
     - json
-    - html
 
 ui:
   static_use_hash: true
